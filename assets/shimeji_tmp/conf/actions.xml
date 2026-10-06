@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <action name="idle" loop="true">
+        <image>idle_1.png</image>
+        <image>idle_2.png</image>
+    </action>
+    <action name="walk" loop="true">
+        <image>walk_1.png</image>
+        <image>walk_2.png</image>
+    </action>
+    <action name="climb" loop="true">
+        <image>climb_1.png</image>
+        <image>climb_2.png</image>
+    </action>
+    <action name="fall">
+        <image>fall.png</image>
+    </action>
+    <action name="sit">
+        <image>sit.png</image>
+    </action>
+    <action name="sleep">
+        <image>sleep.png</image>
+    </action>
+</actions>

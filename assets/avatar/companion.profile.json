@@ -1,0 +1,33 @@
+{
+  "name": "Pretium Companion",
+  "visualStyle": "stylized3d",
+  "referenceTraits": {
+    "hair": "long_wavy_brown",
+    "sweater": "mustard_knit",
+    "boots": "teal_rubber",
+    "glasses": false
+  },
+  "rig": {
+    "bones": [
+      "hips",
+      "spine",
+      "neck",
+      "head",
+      "leftUpperArm",
+      "leftLowerArm",
+      "rightUpperArm",
+      "rightLowerArm",
+      "leftUpperLeg",
+      "leftLowerLeg",
+      "rightUpperLeg",
+      "rightLowerLeg"
+    ],
+    "blendshapes": [
+      "browRaise",
+      "smile",
+      "mouthOpen",
+      "blinkLeft",
+      "blinkRight"
+    ]
+  }
+}

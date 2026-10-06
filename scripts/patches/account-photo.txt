@@ -1,0 +1,10 @@
+      <ConfirmDialog
+        open={confirmRemovePhoto}
+        confirmLabel="Yes, remove photo"
+        message="This will remove your profile picture. You can upload a new one at any time."
+        onCancel={() => setConfirmRemovePhoto(false)}
+        onConfirm={() => {
+          setConfirmRemovePhoto(false);
+          void handleRemovePhoto();
+        }}
+      />

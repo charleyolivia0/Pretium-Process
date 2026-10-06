@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behaviors>
+    <behavior name="default">
+        <action>idle</action>
+        <action>walk</action>
+        <action>climb</action>
+        <action>fall</action>
+        <action>sit</action>
+        <action>sleep</action>
+    </behavior>
+</behaviors>

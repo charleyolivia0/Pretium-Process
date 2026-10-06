@@ -1,0 +1,25 @@
+      <ConfirmDialog
+        open={confirmDeleteId !== null}
+        confirmLabel="Yes, delete"
+        message={
+          <>
+            This will permanently remove{" "}
+            <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>
+              {confirmDeleteName || "this document"}
+            </span>{" "}
+            from the project.
+          </>
+        }
+        onCancel={() => {
+          setConfirmDeleteId(null);
+          setConfirmDeleteName("");
+        }}
+        onConfirm={async () => {
+          const idToDelete = confirmDeleteId;
+          setConfirmDeleteId(null);
+          setConfirmDeleteName("");
+          if (!idToDelete) return;
+          await deleteDocument({ documentId: idToDelete });
+          if (editingDocId === idToDelete) setEditingDocId(null);
+        }}
+      />

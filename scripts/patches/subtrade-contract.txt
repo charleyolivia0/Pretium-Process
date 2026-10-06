@@ -1,0 +1,16 @@
+      <ConfirmDialog
+        open={confirmDeleteOpen}
+        confirmLabel="Yes, delete"
+        message={
+          <>
+            This will remove subtrade{" "}
+            <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>{subtradeDoc.name}</span> from the
+            project.
+          </>
+        }
+        onCancel={() => setConfirmDeleteOpen(false)}
+        onConfirm={async () => {
+          setConfirmDeleteOpen(false);
+          await handleDeleteConfirmed();
+        }}
+      />

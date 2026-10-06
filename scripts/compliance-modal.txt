@@ -1,0 +1,11 @@
+            <h2
+              id="documents-edit-compliance-title"
+              style={{ fontSize: "1.125rem", fontWeight: 600, color: "var(--text-primary)", marginBottom: "1rem" }}
+            >
+              Edit compliance tracking
+              <DocumentSaveStatusChip
+                saveStatus={complianceAutosave.saveStatus}
+                lastSavedAt={complianceAutosave.lastSavedAt}
+                error={complianceAutosave.error}
+              />
+            </h2>

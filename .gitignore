@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-electron/
+release/
+out/
+build/
+coverage/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.cursor/*.log
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db

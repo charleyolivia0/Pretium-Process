@@ -1,0 +1,27 @@
+      <ConfirmDialog
+        open={confirmRemoveBooking !== null}
+        confirmLabel="Yes, remove"
+        message={
+          confirmRemoveBooking ? (
+            <>
+              This will remove the booking on{" "}
+              <span style={{ fontWeight: 600, color: "#111827" }}>{confirmRemoveBooking.dateLabel}</span> at{" "}
+              <span style={{ fontWeight: 600, color: "#111827" }}>{confirmRemoveBooking.timeLabel}</span>
+              {confirmRemoveBooking.title && (
+                <>
+                  {" "}
+                  for <span style={{ fontWeight: 600, color: "#111827" }}>{confirmRemoveBooking.title}</span>
+                </>
+              )}{" "}
+              from the calendar.
+            </>
+          ) : null
+        }
+        onCancel={() => setConfirmRemoveBooking(null)}
+        onConfirm={async () => {
+          const toRemove = confirmRemoveBooking;
+          setConfirmRemoveBooking(null);
+          if (!toRemove) return;
+          await removeApprovedBooking({ bookingId: toRemove.bookingId });
+        }}
+      />

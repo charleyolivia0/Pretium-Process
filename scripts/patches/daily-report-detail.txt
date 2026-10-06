@@ -1,0 +1,21 @@
+      <ConfirmDialog
+        open={confirmDelete}
+        confirmLabel="Yes, continue"
+        message={
+          <>
+            This will permanently delete daily report{" "}
+            <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>{report.title}</span>. This cannot be
+            undone.
+          </>
+        }
+        onCancel={() => setConfirmDelete(false)}
+        onConfirm={async () => {
+          setConfirmDelete(false);
+          await removeTask({ taskId: report._id as Id<"projectTasks"> });
+          if (fromFolderId && projectId) {
+            navigate(`/projects/${projectId}/folders/${fromFolderId}`);
+          } else {
+            navigate(projectSectionHref(projectId, "daily_reports"));
+          }
+        }}
+      />

@@ -1,14 +1,16 @@
 import { useAuthActions } from "@convex-dev/auth/react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { LogoMark } from "../components/LogoMark";
 
 const ROLES = [
   { value: "project_manager", label: "Project Manager" },
   { value: "coordinator", label: "Coordinator" },
   { value: "accounting", label: "Accounting" },
-  { value: "estimating", label: "Estimating" },
   { value: "safety", label: "Safety" },
   { value: "admin", label: "Admin" },
+  { value: "principal", label: "Principal" },
+  { value: "site_superintendent", label: "Site Superintendent" },
 ] as const;
 
 export function Signup() {
@@ -59,7 +61,7 @@ export function Signup() {
           padding: "2rem",
           borderRadius: "1rem",
           boxShadow: "0 18px 45px rgba(15, 23, 42, 0.12)",
-          backgroundColor: "#ffffff",
+          backgroundColor: "var(--surface-panel)",
         }}
       >
         <h1
@@ -71,7 +73,7 @@ export function Signup() {
             marginBottom: "1.5rem",
           }}
         >
-          Sign up
+          Sign up <LogoMark />
         </h1>
         <form onSubmit={handleSubmit}>
           {error && (
@@ -189,14 +191,7 @@ export function Signup() {
             id="signup-role"
             value={role}
             onChange={(e) => setRole(e.target.value)}
-            style={{
-              width: "100%",
-              padding: "0.5rem 0.75rem",
-              marginBottom: "1rem",
-              borderRadius: "0.5rem",
-              border: "1px solid #d1d5db",
-              fontFamily: "Montserrat, sans-serif",
-            }}
+            style={{ width: "100%", marginBottom: "1rem" }}
           >
             {ROLES.map((r) => (
               <option key={r.value} value={r.value}>
@@ -220,7 +215,7 @@ export function Signup() {
               opacity: loading ? 0.7 : 1,
             }}
           >
-            {loading ? "Creating account…" : "Sign up"}
+            {loading ? "Creating account..." : "Sign up"}
           </button>
         </form>
         <p

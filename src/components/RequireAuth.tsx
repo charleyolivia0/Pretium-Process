@@ -20,12 +20,12 @@ export function RequireAuth({ children }: { children: React.ReactNode }) {
           fontFamily: "Montserrat, sans-serif",
         }}
       >
-        <span style={{ color: "#059669" }}>Loading…</span>
+        <span style={{ color: "#059669" }}>Loading...</span>
       </div>
     );
   }
 
-  if (!isAuthenticated || user === null) {
+  if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 

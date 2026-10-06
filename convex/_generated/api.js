@@ -1,34 +1,23 @@
-/* Stub until you run `npx convex dev`. Do not edit. */
-export const api = {
-  users: {
-    current: "users:current",
-    listUsers: "users:listUsers",
-    updateUserRole: "users:updateUserRole",
-    setUserActive: "users:setUserActive",
-  },
-  projects: {
-    listProjects: "projects:listProjects",
-    getProjectById: "projects:getProjectById",
-    getDashboardSummary: "projects:getDashboardSummary",
-    createProject: "projects:createProject",
-    updateProject: "projects:updateProject",
-    updateProjectHealth: "projects:updateProjectHealth",
-  },
-  tasks: {
-    listTasksByProject: "tasks:listTasksByProject",
-    createTask: "tasks:createTask",
-    updateTask: "tasks:updateTask",
-    updateTaskStatus: "tasks:updateTaskStatus",
-  },
-  documents: {
-    listDocumentsByProject: "documents:listDocumentsByProject",
-    createDocumentRecord: "documents:createDocumentRecord",
-    deleteDocumentRecord: "documents:deleteDocumentRecord",
-  },
-  accounting: {
-    listAccountingRecordsByProject: "accounting:listAccountingRecordsByProject",
-    createAccountingRecord: "accounting:createAccountingRecord",
-    updateAccountingRecord: "accounting:updateAccountingRecord",
-  },
-};
-export const internal = {};
+/* eslint-disable */
+/**
+ * Generated `api` utility.
+ *
+ * THIS CODE IS AUTOMATICALLY GENERATED.
+ *
+ * To regenerate, run `npx convex dev`.
+ * @module
+ */
+
+import { anyApi, componentsGeneric } from "convex/server";
+
+/**
+ * A utility for referencing Convex functions in your app's API.
+ *
+ * Usage:
+ * ```js
+ * const myFunctionReference = api.myModule.myFunction;
+ * ```
+ */
+export const api = anyApi;
+export const internal = anyApi;
+export const components = componentsGeneric();
